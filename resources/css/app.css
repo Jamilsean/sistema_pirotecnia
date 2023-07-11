@@ -5,3 +5,11 @@
 [x-cloak] {
     display: none;
 }
+@layer components {
+    .color-principal{
+        @apply bg-indigo-700;
+    }
+    .item-nav{
+        @apply text-white font-semibold ;
+    }
+}

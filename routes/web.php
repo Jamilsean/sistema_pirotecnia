@@ -23,6 +23,9 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('web.index');
     })->name('dashboard');
+    Route::get('/empresa', function () {
+        return view('webApp.empresaApp');
+    })->name('empresa');
 });
