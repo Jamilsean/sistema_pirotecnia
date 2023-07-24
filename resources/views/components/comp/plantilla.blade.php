@@ -16,11 +16,19 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Styles -->
+    @wireUiScripts
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!--AUMENTO DE JAMIL-->
+
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased">
-    {{$slot}}
+<body class="font-sans  p-0 m-0">
+    <div class="w-screen ">
+        {{$slot}}
+        
+    </div>
+    
 
 
     @stack('modals')

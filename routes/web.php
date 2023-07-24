@@ -25,7 +25,22 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('web.index');
     })->name('dashboard');
+     Route::get('/dashboard2', function () {
+       // return view('web.index');
+        //Artisan::call('storage:link');
+        //Artisan::call('migrate:fresh --seed');
+        //Artisan::call('migrate');
+    })->name('dashboard');
     Route::get('/empresa', function () {
         return view('webApp.empresaApp');
     })->name('empresa');
+    Route::get('/producto', function () {
+        return view('webApp.productoApp');
+    })->name('producto');
+    Route::get('/almacen', function () {
+        return view('webApp.almacenApp');
+    })->name('almacen');
+    Route::get('/venta', function () {
+        return view('webApp.ventaApp');
+    })->name('venta');
 });

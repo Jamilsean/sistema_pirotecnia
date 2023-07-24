@@ -1,4 +1,3 @@
-<div class="bg-red-200">
-    {{-- Do your work, then step back. --}}
-    Hola desde el contenido asd
+<div class="bg-red-200 container mx-auto">
+    {{-- Do your work, then step back. --}}          
 </div>
