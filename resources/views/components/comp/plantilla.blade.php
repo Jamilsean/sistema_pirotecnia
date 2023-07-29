@@ -16,8 +16,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Styles -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     @wireUiScripts
     <script src="//unpkg.com/alpinejs" defer></script>
+
     <!--AUMENTO DE JAMIL-->
 
     @livewireStyles
@@ -34,6 +38,23 @@
     @stack('modals')
 
     @livewireScripts
+    @stack('js')
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Livewire.on('guardado',(postID,descripcion)=>{
+            Swal.fire(
+            postID,
+            descripcion,
+            'success'
+            )});
+            Livewire.on('error',(postID,descripcion)=>{
+            Swal.fire(
+            postID,
+            descripcion,
+            'error'
+            )});
+    </script>
 </body>
 
 </html>
