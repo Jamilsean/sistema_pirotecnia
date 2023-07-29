@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire\Producto;
 
+use App\Models\productos;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ViewProductos extends Component
 {
+    use WithPagination;
     public function render()
     {
-        return view('livewire.producto.view-productos');
+        $productos=productos::paginate(5);
+        return view('livewire.producto.view-productos',compact('productos','productos'));
     }
 }
