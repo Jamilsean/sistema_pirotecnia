@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 class ViewProductos extends Component
 {
     use WithPagination;
+    protected $listeners=['render'];
     public function render()
     {
         $productos=productos::paginate(5);
