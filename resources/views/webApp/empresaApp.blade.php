@@ -4,7 +4,7 @@
            
             @livewire('empresa.form-empresa')
         </div>
-        <div class="my-2">
+        <div class="px-5">
             @livewire('empresa.view-empresas')
         </div>
     </div>

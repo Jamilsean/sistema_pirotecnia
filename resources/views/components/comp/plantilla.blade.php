@@ -28,7 +28,7 @@
 </head>
 
 <body class="font-sans  p-0 m-0">
-    <div class="w-screen ">
+    <div class=" ">
         {{$slot}}
         
     </div>

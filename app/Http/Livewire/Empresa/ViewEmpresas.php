@@ -14,13 +14,10 @@ class ViewEmpresas extends Component
         $empresas=empresas::paginate(5);
         return view('livewire.empresa.view-empresas',compact('empresas','empresas'));
     }
-    public function hola(){
-        $this->emit('guardado','as','ass');
-    }
     public function editar($id){
         $this->emitTo('empresa.form-empresa','mostrar_form',$id);
     }
-    public function delete(){
-        $this->emit('delete','as','ass');
+    public function eliminar(){
+        $this->emit('guardado','as','ass');
     }
 }
