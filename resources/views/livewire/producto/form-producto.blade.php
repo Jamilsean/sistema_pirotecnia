@@ -13,7 +13,7 @@
             <div class="flex justify-between gap-x-4">
                <!-- <x-button flat negative label="Delete" wire:click="delete" />-->
                 <div class="flex">
-                    <x-button flat label="Cancelar" x-on:click="close" wire:click='close' />
+                    <x-button flat label="Cancelar" x-on:click="close" wire:click='cancelar' />
                     <x-button primary label="Guardar" wire:click="guardar" wire:loading.attr='disabled'  class="disabled:opacity-25"/>
                 </div>
             </div>
