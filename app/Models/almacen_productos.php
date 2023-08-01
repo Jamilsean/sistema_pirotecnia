@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class almacen_productos extends Model
 {
-    use HasFactory;
+    protected $table='almacen_productos';
+    protected $fillable=['fecha_ingreso','cantidad','precio_entrada','precio_venta','productos_id','empresas_id'];
+    public $timestamps=false;
 }

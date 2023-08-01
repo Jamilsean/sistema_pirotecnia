@@ -1,5 +1,5 @@
 <div>
-    <button class="btn btn-success mx-2" wire:click='$set("blurModal",true)'>Nuevo</button>
+    <button class="btn btn-success mx-2" wire:click='$set("blurModal",true)'>Nueva Empresa</button>
     <x-modal.card title="Gestión de empresa" blur wire:model.defer="blurModal">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <x-input  wire:model='nombre_empresa' icon="home" label="Nombre" placeholder="Nombre de la empresa" />

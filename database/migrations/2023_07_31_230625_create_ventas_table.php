@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('almacen_productos', function (Blueprint $table) {
+        Schema::create('ventas', function (Blueprint $table) {
             $table->id();
+            $table->string('estado')->default('vendido');
+            $table->text('descripcion')->nullable();
+            $table->dateTime('created_at');
+            $table->foreignId('clientes_id')->nullable()->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('almacen_productos');
+        Schema::dropIfExists('ventas');
     }
 };

@@ -50,6 +50,10 @@
                     <a class="item-nav" href="{{ route('venta') }}" :active="request()->routeIs('venta')">Venta
                     </a>
                 </li>
+                <li>
+                    <a class="item-nav" href="{{ route('venta') }}" :active="request()->routeIs('venta')">Administrador
+                    </a>
+                </li>
                 
             </ul>
         </div>
