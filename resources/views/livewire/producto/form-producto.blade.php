@@ -6,7 +6,7 @@
             <x-input  wire:model='codigo' icon="home" label="Codigo" placeholder="Codigo del  Producto" />
             <x-input  wire:model='nombre_producto' icon="home" label="Producto" placeholder="Nombre del  Producto" />
             <x-input  wire:model='descripcion_producto' icon="home" label="Descripción" placeholder="Descripción del  Producto" />
-            <x-inputs.number label="How many Burgers?" wire:model='stock' min='0'/>
+            <x-inputs.number label="Stock" wire:model='stock' min='0'/>
             <input class="input_file"  accept="image/*" type="file" id="{{$idImagen}}"
                             wire:model='imagen_url'>
         </div>

@@ -18,4 +18,9 @@ class ViewProductos extends Component
     public function editar($id){
         $this->emitTo('producto.form-producto','mostrar_form',$id);
     }
+    
+    public function aumentar($id){
+        $this->emitTo('almacen.form-almacen','mostrar_form',$id);
+    }
+    
 }
