@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\unidades;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 
 class UnidadesSeeder extends Seeder

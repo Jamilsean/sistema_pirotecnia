@@ -17,7 +17,5 @@ class ViewEmpresas extends Component
     public function editar($id){
         $this->emitTo('empresa.form-empresa','mostrar_form',$id);
     }
-    public function eliminar(){
-        $this->emit('guardado','as','ass');
-    }
+    
 }
