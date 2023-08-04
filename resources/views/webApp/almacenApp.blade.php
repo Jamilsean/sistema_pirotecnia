@@ -2,7 +2,7 @@
     <div class="bg-slate-500 h-full container mx-auto py-2">
         <div class="">
            
-            @livewire('almacen.form-almacen')
+            @livewire('almacen.form-almacen', ['ver' => true])
         </div>
         <div class="px-5">
             @livewire('almacen.view-almacen')

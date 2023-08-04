@@ -1,10 +1,10 @@
 <div>
- <div class="mx-5">
+ <div class="">
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar producto" />
   </div>
     <!-- component -->
- <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
-     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+    <x-comp.table>
+           <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
        <thead class="bg-gray-50">
          <tr>
            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Productos</th>
@@ -55,7 +55,7 @@
                   <span
                     class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-600"
                   >
-                    Develop
+                  <x-icon name="shopping-cart" class="w-5 h-5" />
                   </span>
                 </div>
               </td>
@@ -83,7 +83,7 @@
        </tbody>
      </table>
      {{$productos->links()}}
-   </div>
+   </x-comp.table>
    @push('js')
   <script>
     Livewire.on('delete',postId=>{

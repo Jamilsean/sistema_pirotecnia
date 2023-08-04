@@ -1,5 +1,5 @@
 <div>
-  <div class="my-2">
+  <div class="">
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar empresa" />
   </div>
 
