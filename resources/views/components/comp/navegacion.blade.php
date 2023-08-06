@@ -42,7 +42,7 @@
                     <a class="item-nav" href="{{ route('producto') }}" :active="request()->routeIs('producto')">Producto
                     </a>
                 </li>
-                <li>
+                <!--<li>
                     <a class="item-nav" href="{{ route('almacen') }}" :active="request()->routeIs('almacen')">Almacen
                     </a>
                 </li>
@@ -53,7 +53,7 @@
                 <li>
                     <a class="item-nav" href="{{ route('venta') }}" :active="request()->routeIs('venta')">Administrador
                     </a>
-                </li>
+                </li>-->
                 
             </ul>
         </div>
