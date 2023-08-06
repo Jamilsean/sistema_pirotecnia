@@ -29,7 +29,7 @@ class ViewProductos extends Component
     {
         array_push($this->productos_vender, $id);
         $this->emit('carrito','Se agregó al carrito','success');
-
+        $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
     }
     public function quitar_carrito($id)
     {
@@ -39,5 +39,6 @@ class ViewProductos extends Component
             unset($this->productos_vender[$numero]);
         }
         $this->emit('carrito','Se quitó del carrito','error');
+        $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
     }
 }

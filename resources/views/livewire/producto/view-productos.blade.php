@@ -2,7 +2,6 @@
   <div class="">
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar producto" />
   </div>
-  {{var_export($productos_vender)}}
   <!-- component -->
   <x-comp.table>
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
@@ -25,22 +24,31 @@
               </div>
               <div class="ml-4">
                 <div class="text-sm font-medium text-gray-900">
-                  {{$producto->codigo}}
+                  {{$producto->nombre_producto}}
                 </div>
                 <div class="text-sm text-gray-500">
-                  {{$producto->nombre_producto}}
+                  {{$producto->codigo}}
                 </div>
               </div>
             </div>
           </td>
           <td class="px-6 py-4">
-            <span
+            
+              
+              @if ($producto->stock)
+              <span
               class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
-              <span class="h-1.5 w-1.5 rounded-full bg-green-600" wire:click='agregar_carrito'></span>
+              <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
               {{$producto->estado}}
             </span>
+              @else
+              <span
+              class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-red-600">
+              <span class="h-1.5 w-1.5 rounded-full bg-red-600"></span>agotado
+            </span>
+              @endif
           </td>
-          <td class="px-6 py-4">{{$producto->stock}} unidades</td>
+          <td class="px-6 py-4">{{$producto->stock}} Cajas</td>
           <td class="px-6 py-4">
             <div class="flex gap-2">
               <button wire:click='aumentar({{$producto->id}})'>
@@ -50,6 +58,7 @@
                 class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600">
                 S/.25.00
               </span>
+              @if ($producto->stock>0)
               <span
                 class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-600">
                 @if (in_array($producto->id,$productos_vender))
@@ -57,8 +66,11 @@
                 @else
                 <x-icon name="shopping-cart" class="w-5 h-5" wire:click='agregar_carrito({{$producto->id}})' />
                 @endif
-
-              </span>
+              </span>   
+              @else
+              <i class="fa-solid fa-cart-shopping" disabled></i>
+              @endif
+              
             </div>
           </td>
           <td class="px-6 py-4">
