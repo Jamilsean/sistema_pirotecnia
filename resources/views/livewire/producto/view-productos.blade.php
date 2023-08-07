@@ -3,7 +3,6 @@
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar producto" />
   </div>
   
-  {{var_export($productos_vender)}}
   <!-- component -->
   <x-comp.table>
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
