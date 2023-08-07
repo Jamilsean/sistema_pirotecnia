@@ -2,6 +2,8 @@
   <div class="">
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar producto" />
   </div>
+  
+  {{var_export($productos_vender)}}
   <!-- component -->
   <x-comp.table>
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
@@ -56,7 +58,7 @@
               </button>
               <span
                 class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600">
-                S/.25.00
+                S/. {{$producto->precio_venta}} 
               </span>
               @if ($producto->stock>0)
               <span

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nombre_producto');
             $table->text('descripcion_producto');
             $table->text('imagen_url');
+            $table->double('precio_venta');
             $table->integer('stock');
             $table->string('estado')->default('disponible');
         });

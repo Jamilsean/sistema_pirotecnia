@@ -16,7 +16,6 @@ return new class extends Migration
             $table->date('fecha_ingreso');
             $table->integer('cantidad');
             $table->double('precio_entrada');
-            $table->double('precio_venta');
             $table->foreignId('productos_id')->nullable()->references('id')->on('productos')->onDelete('cascade');
             $table->foreignId('empresas_id')->nullable()->references('id')->on('empresas')->onDelete('cascade');
             $table->timestamps();

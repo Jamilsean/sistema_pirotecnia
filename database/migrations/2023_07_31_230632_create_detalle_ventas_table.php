@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('cantidad');
             $table->double('precio_venta');
-            $table->double('estado');
+            $table->string('estado')->default('vendido');
             $table->foreignId('ventas_id')->nullable()->references('id')->on('ventas')->onDelete('cascade');
-            $table->foreignId('almacen_productos_id')->nullable()->references('id')->on('almacen_productos')->onDelete('cascade');
+            $table->foreignId('productos_id')->nullable()->references('id')->on('productos')->onDelete('cascade');
             $table->timestamps();
         });
     }

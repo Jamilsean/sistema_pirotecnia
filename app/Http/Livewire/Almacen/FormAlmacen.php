@@ -12,7 +12,7 @@ class FormAlmacen extends Component
     
     public $ver;
     public $obj_almacen,$obj_producto;
-    public $fecha_ingreso,$cantidad,$precio_entrada,$precio_venta,$productos_id,$empresas_id=0;
+    public $fecha_ingreso,$cantidad,$precio_entrada,$productos_id,$empresas_id=0;
 
     //Inicial todos
     public $modal=false;
@@ -34,7 +34,6 @@ class FormAlmacen extends Component
         $this->obj_almacen->fecha_ingreso = $this->fecha_ingreso;
         $this->obj_almacen->cantidad = $this->cantidad;
         $this->obj_almacen->precio_entrada = $this->precio_entrada;
-        $this->obj_almacen->precio_venta = $this->precio_venta;
         $this->obj_almacen->productos_id = $this->obj_producto->id;
         $this->obj_almacen->empresas_id = $this->empresas_id;
         $this->obj_almacen->save();

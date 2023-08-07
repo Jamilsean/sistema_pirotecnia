@@ -13,7 +13,7 @@ class FormProducto extends Component
     use WithPagination;
     public $obj_producto;
     public $modal;
-    public $codigo, $nombre_producto, $descripcion_producto, $imagen_url, $estado, $stock = 0;
+    public $codigo, $nombre_producto, $descripcion_producto,$precio_venta, $imagen_url, $estado, $stock = 0;
     public $idImagen;
     protected $listeners = ['mostrar_form', 'eliminar'];
     public function mount()
@@ -35,6 +35,7 @@ class FormProducto extends Component
         $this->obj_producto->nombre_producto = $this->nombre_producto;
         $this->obj_producto->descripcion_producto = $this->descripcion_producto;
         $this->obj_producto->stock = $this->stock;
+        $this->obj_producto->precio_venta = $this->precio_venta;
         $this->obj_producto->imagen_url = $url_imagen;
         $this->obj_producto->save();
         $this->emit('guardado', 'Registrado', 'Registro guardado');
@@ -59,6 +60,7 @@ class FormProducto extends Component
         $this->obj_producto->nombre_producto = $this->nombre_producto;
         $this->obj_producto->descripcion_producto = $this->descripcion_producto;
         $this->obj_producto->stock = $this->stock;
+        $this->obj_producto->precio_venta = $this->precio_venta;
         $this->obj_producto->imagen_url = $url_imagen;
         $this->obj_producto->save();
         $this->emit('guardado', 'Editado', 'Registro editado ');

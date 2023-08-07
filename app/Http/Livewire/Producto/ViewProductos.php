@@ -9,7 +9,7 @@ use Livewire\WithPagination;
 class ViewProductos extends Component
 {
     use WithPagination;
-    protected $listeners = ['render'];
+    protected $listeners = ['render','cancelar'];
     public $productos_vender = [];
     public function render()
     {
@@ -40,5 +40,8 @@ class ViewProductos extends Component
         }
         $this->emit('carrito','Se quitó del carrito','error');
         $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
+    }
+    public function cancelar(){
+        $this->reset();
     }
 }

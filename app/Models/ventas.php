@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class ventas extends Model
 {
    //cambiar;
-   protected $table = 'empresas';
+   protected $table = 'ventas';
    protected $fillable = [
-       'nombre_empresa',
-       'ruc_empresa',
-       'telefono_empresa'
+       'estado',
+       'descripcion',
+       'clientes_id'
    ];
-   public $timestamps=false;
+   
 }

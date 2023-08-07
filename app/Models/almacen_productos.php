@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class almacen_productos extends Model
 {
     protected $table='almacen_productos';
-    protected $fillable=['fecha_ingreso','cantidad','precio_entrada','precio_venta','productos_id','empresas_id'];
+    protected $fillable=['fecha_ingreso','cantidad','precio_entrada','productos_id','empresas_id'];
     public $timestamps=false;
 }

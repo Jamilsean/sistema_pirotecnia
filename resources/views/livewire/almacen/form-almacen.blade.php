@@ -11,7 +11,7 @@
                 wire:model='fecha_ingreso' />
             <x-inputs.number label="¿Cantidad de entrada?" wire:model='cantidad' min='0' />
             <x-input icon="cash" label="Precio de entrada" placeholder="Precio de compra" wire:model='precio_entrada' step="0.01" />
-            <x-input icon="cash" label="Precio de salida" placeholder="Precio de venta" wire:model='precio_venta' step="0.01" />
+            
             <select id="countries"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 wire:model='empresas_id'>
