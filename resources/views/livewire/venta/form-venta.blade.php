@@ -40,7 +40,7 @@
                             
                             <x-input icon="cash" label="Precio de venta" placeholder="Precio de venta" wire:model='precios.{{$index}}' step="0.01" />
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-1 py-4">
                             
                             <x-inputs.number label="Stock" wire:model='cantidad.{{$index}}' min='0'/>
                             <span class="text-xs">Stock en Almacen:
