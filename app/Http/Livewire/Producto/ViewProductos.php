@@ -5,9 +5,11 @@ namespace App\Http\Livewire\Producto;
 use App\Models\productos;
 use Livewire\Component;
 use Livewire\WithPagination;
+use WireUi\Traits\Actions;
 
 class ViewProductos extends Component
 {
+    use Actions;
     use WithPagination;
     protected $listeners = ['render','cancelar'];
     public $productos_vender = [];
@@ -43,5 +45,12 @@ class ViewProductos extends Component
     }
     public function cancelar(){
         $this->reset();
+    }
+    public function save()
+    {
+        $this->notification()->error(
+            $title = 'Error !!!',
+            $description = 'Your profile was not saved'
+        );
     }
 }
