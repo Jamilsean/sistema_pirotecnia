@@ -2,8 +2,6 @@
   <div class="">
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar producto" />
   </div>
-<x-notifications />
-
 <button wire:click='save'>Boton</button>
   
   <!-- component -->
@@ -105,12 +103,6 @@
   @push('js')
 
   <script>
-window.$wireui.notify({
-    title: 'Profile saved!',
-    description: 'Your profile was successfully saved',
-    icon: 'success'
-})
-
 
 
     Livewire.on('delete',postId=>{

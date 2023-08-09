@@ -28,6 +28,7 @@
 </head>
 
 <body class="font-sans  p-0 m-0">
+    <x-notifications position="top-left" />
     <div class=" ">
         {{$slot}}
         

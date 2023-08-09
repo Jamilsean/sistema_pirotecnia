@@ -30,7 +30,10 @@ class ViewProductos extends Component
     public function agregar_carrito($id)
     {
         array_push($this->productos_vender, $id);
-        $this->emit('carrito','Se agregó al carrito','success');
+        $this->notification()->success(
+            $title = 'Producto añadido !!!',
+            $description = 'Su producto fue añadido al carrito'
+        );
         $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
     }
     public function quitar_carrito($id)
@@ -40,7 +43,10 @@ class ViewProductos extends Component
         if ($numero !== false) {
             unset($this->productos_vender[$numero]);
         }
-        $this->emit('carrito','Se quitó del carrito','error');
+        $this->notification()->error(
+            $title = 'Producto quitado !!!',
+            $description = 'Su producto fue quitado del carrito'
+        );
         $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
     }
     public function cancelar(){
@@ -48,9 +54,6 @@ class ViewProductos extends Component
     }
     public function save()
     {
-        $this->notification()->error(
-            $title = 'Error !!!',
-            $description = 'Your profile was not saved'
-        );
+        
     }
 }
