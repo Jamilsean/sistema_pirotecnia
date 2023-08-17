@@ -48,6 +48,7 @@ class FormProducto extends Component
         $this->codigo = $this->obj_producto->codigo;
         $this->nombre_producto = $this->obj_producto->nombre_producto;
         $this->descripcion_producto = $this->obj_producto->descripcion_producto;
+        $this->precio_venta = $this->obj_producto->precio_venta;
         $this->stock = $this->obj_producto->stock;
     }
     public function editar()

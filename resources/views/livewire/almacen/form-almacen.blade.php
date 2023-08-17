@@ -30,7 +30,7 @@
                     @if (isset($obj_almacen))
                     <x-button warning label="Editar" wire:click="editar" />
                     @else
-                    <x-button primary label="Guardar" wire:click="guardar" />
+                    <x-button positive label="Guardar" wire:click="guardar" />
                     @endif
                 </div>
             </div>

@@ -42,11 +42,11 @@
                     <a class="item-nav" href="{{ route('producto') }}" :active="request()->routeIs('producto')">Producto
                     </a>
                 </li>
-                <!--<li>
-                    <a class="item-nav" href="{{ route('almacen') }}" :active="request()->routeIs('almacen')">Almacen
+                <li>
+                    <a class="item-nav" href="{{ route('cliente') }}" :active="request()->routeIs('cliente')">Clientes
                     </a>
                 </li>
-                <li>
+               <!-- <li>
                     <a class="item-nav" href="{{ route('venta') }}" :active="request()->routeIs('venta')">Venta
                     </a>
                 </li>

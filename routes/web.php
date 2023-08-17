@@ -35,6 +35,9 @@ Route::middleware([
     Route::get('/empresa', function () {
         return view('webApp.empresaApp');
     })->name('empresa');
+    Route::get('/cliente', function () {
+        return view('webApp.clientesApp');
+    })->name('cliente');
     Route::get('/producto', function () {
         return view('webApp.productoApp');
     })->name('producto');

@@ -30,10 +30,12 @@ class ViewProductos extends Component
     public function agregar_carrito($id)
     {
         array_push($this->productos_vender, $id);
-        $this->notification()->success(
-            $title = 'Producto añadido !!!',
-            $description = 'Su producto fue añadido al carrito'
-        );
+        $this->notification([
+            'title' => 'Producto añadido !!!',
+            'description' => 'Su producto fue añadido al carrito',
+            'icon'        => 'success',
+            'timeout' => 1500,    
+        ]);
         $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
     }
     public function quitar_carrito($id)
@@ -43,17 +45,16 @@ class ViewProductos extends Component
         if ($numero !== false) {
             unset($this->productos_vender[$numero]);
         }
-        $this->notification()->error(
-            $title = 'Producto quitado !!!',
-            $description = 'Su producto fue quitado del carrito'
-        );
+        $this->notification([
+            'title' =>  'Producto quitado !!!',
+            'description' => 'Su producto fue quitado del carrito',
+            'icon'        => 'error',
+            'timeout' => 1500,            
+        ]);
         $this->emitTo('venta.form-venta', 'ver_compras', $this->productos_vender);
     }
     public function cancelar(){
         $this->reset();
     }
-    public function save()
-    {
-        
-    }
+  
 }

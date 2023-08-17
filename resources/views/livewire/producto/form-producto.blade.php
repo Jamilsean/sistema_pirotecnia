@@ -19,7 +19,7 @@
                     @if (isset($obj_producto))
                     <x-button warning label="Editar" wire:click="editar" wire:loading.attr='disabled'  class="disabled:opacity-25"/>
                     @else
-                    <x-button primary label="Guardar" wire:click="guardar" wire:loading.attr='disabled'  class="disabled:opacity-25"/>    
+                    <x-button positive label="Guardar" wire:click="guardar" wire:loading.attr='disabled'  class="disabled:opacity-25"/>    
                     @endif
                     
                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Venta;
 
+use App\Models\clientes;
 use App\Models\detalle_ventas;
 use App\Models\productos;
 use App\Models\ventas;
@@ -13,11 +14,12 @@ class FormVenta extends Component
     public $modal=false;
     public $obj_productos=[];
     public $productos_venta=[];
-    public $precios=[],$cantidad=[];
+    public $precios=[],$cantidad=[],$clientes_id;
     protected $listeners=['ver_compras'];
     public function render()
     {
-        return view('livewire.venta.form-venta');
+        $clientes=clientes::all();
+        return view('livewire.venta.form-venta',compact('clientes','clientes'));
     }
     
     public function ver_compras($compras){
