@@ -24,7 +24,7 @@
                 <div class="font-medium text-gray-700">
                   Nro -{{$venta->id}}
                 </div>
-                <div class="text-gray-400"><span class="font-bold">OBSERVACION</span> {{$venta->descripcion}}</div>
+                <div class="text-gray-400"> {{$venta->descripcion}}</div>
               </div>
             </th>
             <td class="px-6 py-4">
