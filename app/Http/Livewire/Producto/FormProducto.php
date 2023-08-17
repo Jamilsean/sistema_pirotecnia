@@ -91,9 +91,11 @@ class FormProducto extends Component
     public function eliminar($id)
     {
         $this->obj_producto = productos::find($id);
-        $this->obj_producto->delete();
+        $this->obj_producto->borrado=1;
+        $this->obj_producto->update();
         $this->cancelar();
         $this->emit('guardado', 'Eliminado', 'Registro eliminado');
+        $this->emitTo('venta.form-venta', 'cancelar');
     }
     public function cancelar()
     {

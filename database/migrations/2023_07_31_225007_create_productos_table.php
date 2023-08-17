@@ -20,6 +20,7 @@ return new class extends Migration
             $table->double('precio_venta');
             $table->integer('stock');
             $table->string('estado')->default('disponible');
+            $table->tinyInteger('borrado')->default(0);
         });
     }
 

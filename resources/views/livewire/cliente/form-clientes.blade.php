@@ -1,6 +1,6 @@
 <div class="">
     
-    <x-button warning class="right-0" wire:click='abrir_modal'>Nuevo Cliente</x-button>
+    <x-button positive class="right-0" wire:click='abrir_modal'>Nuevo Cliente</x-button>
     
     <x-modal.card title="Registro de Cliente" blur wire:model.defer="modal">
  

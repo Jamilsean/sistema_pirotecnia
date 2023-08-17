@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('estado')->default('vendido');
             $table->text('descripcion')->nullable();
             $table->foreignId('clientes_id')->nullable()->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreignId('tipo_pagos_id')->nullable()->references('id')->on('tipo_pagos')->onDelete('cascade');
             $table->timestamps();
 
         });

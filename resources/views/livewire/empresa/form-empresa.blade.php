@@ -14,7 +14,7 @@
                     @if (isset($obj_empresa))
                     <x-button warning label="Editar" wire:click="editar" />    
                     @else
-                    <x-button primary label="Guardar" wire:click="save" />
+                    <x-button positive label="Guardar" wire:click="save" />
                     @endif
                 </div>
             </div>

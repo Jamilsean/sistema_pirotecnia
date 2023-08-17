@@ -15,7 +15,7 @@ class ViewProductos extends Component
     public $productos_vender = [];
     public function render()
     {
-        $productos = productos::paginate(5);
+        $productos = productos::where('borrado',0)->paginate(5);
         return view('livewire.producto.view-productos', compact('productos', 'productos'));
     }
     public function editar($id)

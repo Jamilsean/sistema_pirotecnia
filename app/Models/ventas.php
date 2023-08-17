@@ -12,7 +12,8 @@ class ventas extends Model
    protected $fillable = [
        'estado',
        'descripcion',
-       'clientes_id'
+       'clientes_id',
+       'tipo_pagos_id'
    ];
    
 }
