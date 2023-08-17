@@ -28,9 +28,9 @@
                 <div class="flex">
                     <x-button flat label="Cancel" x-on:click="cancel" wire:click='cancelar' />
                     @if (isset($obj_almacen))
-                    <x-button warning label="Editar" wire:click="editar" />
+                    <x-button warning spinner label="Editar" wire:click="editar" />
                     @else
-                    <x-button positive label="Guardar" wire:click="guardar" />
+                    <x-button positive spinner label="Guardar" wire:click="guardar" />
                     @endif
                 </div>
             </div>

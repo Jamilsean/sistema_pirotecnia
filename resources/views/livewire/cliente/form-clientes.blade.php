@@ -15,10 +15,10 @@
                 <x-button  wire:click='cancelar'>Cancelar</x-button>
                 @if (empty($obj_cliente))
                     
-                <x-button positive  wire:click='guardar'>Guardar</x-button>
+                <x-button positive  spinner wire:click='guardar'>Guardar</x-button>
                     
                 @else
-                <x-button warning  wire:click='editar'>Editar</x-button>
+                <x-button warning  spinner wire:click='editar'>Editar</x-button>
                     
                 @endif
             </div>

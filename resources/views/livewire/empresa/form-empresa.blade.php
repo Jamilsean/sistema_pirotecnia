@@ -12,9 +12,9 @@
                 <div class="flex">
                     <x-button flat label="Cancel" x-on:click="close" wire:click='close' />
                     @if (isset($obj_empresa))
-                    <x-button warning label="Editar" wire:click="editar" />    
+                    <x-button spinner  warning label="Editar" wire:click="editar" />    
                     @else
-                    <x-button positive label="Guardar" wire:click="save" />
+                    <x-button  spinner positive label="Guardar" wire:click="save" />
                     @endif
                 </div>
             </div>

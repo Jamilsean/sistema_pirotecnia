@@ -2,8 +2,7 @@
   <div class="">
     <x-input icon="search" class="" label="Buscar" placeholder="Buscar producto" />
   </div>
-<button wire:click='save'>Boton</button>
-  
+  <x-button orange icon="x" label="Cancelar" wire:click="cancelar" wire:loading.attr='disabled'    class="disabled:opacity-25 my-2"/>    
   <!-- component -->
   <x-comp.table>
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
@@ -62,11 +61,11 @@
               </span>
               @if ($producto->stock>0)
               <span
-                class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-600">
+                class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold ">
                 @if (in_array($producto->id,$productos_vender))
-                <x-icon name="refresh" class="w-5 h-5" wire:click='quitar_carrito({{$producto->id}})' />
+                <x-icon name="refresh" class="text-red-600 w-5 h-5 " wire:click='quitar_carrito({{$producto->id}})' />
                 @else
-                <x-icon name="shopping-cart" class="w-5 h-5" wire:click='agregar_carrito({{$producto->id}})' />
+                <x-icon name="shopping-cart" class="text-green-600 w-5 h-5" wire:click='agregar_carrito({{$producto->id}})' />
                 @endif
               </span>   
               @else
