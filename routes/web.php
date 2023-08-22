@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BoletasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +42,5 @@ Route::middleware([
     Route::get('/venta', function () {
         return view('webApp.ventaApp');
     })->name('venta');
+    Route::resource('pdf', BoletasController::class);
 });
