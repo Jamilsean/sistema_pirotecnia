@@ -57,12 +57,11 @@ class BoletasController extends Controller
         ->where('ventas.id',$id)->first();
         $total=0;
         $datos=detalle_ventas::join('productos','productos.id','=','detalle_ventas.productos_id')->select('detalle_ventas.*','productos.codigo','productos.nombre_producto','productos.descripcion_producto')
-        ->where('detalle_ventas.id',$id)
+        ->where('detalle_ventas.ventas_id',$id)
         ->get();
         foreach($datos as $d_venta){
             $total+=$d_venta->cantidad*$d_venta->precio_venta;
         }
-
         $pdf = Pdf::loadView('webApp.boleta', compact(['datos','datos',
         'venta','venta',
         'total','total',
